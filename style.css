@@ -1,15 +1,9 @@
 .corsa-final-badge {
-    background-color: transparent !important; /* حذف کامل کادر آبی */
-    color: #1d9bf0 !important; /* رنگ آبی رسمی متن آیدی توییتر */
-    font-size: 11px !important;
-    font-weight: 800 !important;
-    margin-left: 5px !important;
+    background-color: transparent !important; 
+    color: #1d9bf0 !important;
+    font-size: 11px !important; 
+    font-weight: 800 !important; 
+    margin-left: 6px !important;
     display: inline-block !important;
     vertical-align: middle !important;
-    
-    /* شاه‌کلید حل مشکل کپی شدن: عدد امتیاز هرگز با موس انتخاب یا کپی نمی‌شود */
-    user-select: none !important;
-    -webkit-user-select: none !important; /* سازگاری کامل با مرورگرهای بر پایه کرومیوم */
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
 }
