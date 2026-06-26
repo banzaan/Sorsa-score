@@ -4,14 +4,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === "FETCH_SCORE") {
         (async () => {
             try {
-                // مرحله اول: گرفتن UUID
+  
                 const suggestRes = await fetch(`${BASE_URL}/suggest?query=${request.username}`);
                 const suggestData = await suggestRes.json();
                 
                 if (suggestData && suggestData.accounts && suggestData.accounts.length > 0) {
                     const uid = suggestData.accounts[0].id;
                     
-                    // مرحله دوم: گرفتن امتیاز
+         
                     const historyRes = await fetch(`${BASE_URL}/${uid}/histories`);
                     const historyData = await historyRes.json();
                     
@@ -25,6 +25,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                 sendResponse({ score: null });
             }
         })();
-        return true; // برای اینکه ارتباط آسنکرون قطع نشود
+        return true; //
     }
 });

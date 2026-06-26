@@ -2,18 +2,12 @@
     /* Pill-shaped badge; background and text color come from the tier class (below) */
     font-size: 11px !important;
     font-weight: 800 !important;
-    margin-left: 5px !important;
+    margin-left: 6px !important;
     padding: 1px 6px !important;
     border-radius: 9px !important;
     line-height: 1.5 !important;
     display: inline-block !important;
     vertical-align: middle !important;
-
-    /* Prevent the score from being selected or copied with the mouse */
-    user-select: none !important;
-    -webkit-user-select: none !important; /* Full compatibility with Chromium-based browsers */
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
 }
 
 /* Per-tier background color, aligned with Sorsa's own palette (gray -> blue -> green -> teal -> cyan) */
