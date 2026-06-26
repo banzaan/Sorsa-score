@@ -1,7 +1,7 @@
 # Sorsa Score 
 
 Bring Sorsa analytics directly into your X (Twitter) timeline. This extension seamlessly injects user credibility and alpha scores right next to handles on X, ensuring you never interact with or follow an unverified account blindly.
-
+![Extension Preview](preview.gif)
 Built entirely with modern architecture (Manifest V3), focused on high performance and maximum privacy.
 
 ## ✨ Features
