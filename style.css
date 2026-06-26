@@ -1,15 +1,24 @@
 .corsa-final-badge {
-    background-color: transparent !important; /* حذف کامل کادر آبی */
-    color: #1d9bf0 !important; /* رنگ آبی رسمی متن آیدی توییتر */
+    /* Pill-shaped badge; background and text color come from the tier class (below) */
     font-size: 11px !important;
     font-weight: 800 !important;
     margin-left: 5px !important;
+    padding: 1px 6px !important;
+    border-radius: 9px !important;
+    line-height: 1.5 !important;
     display: inline-block !important;
     vertical-align: middle !important;
-    
-    /* شاه‌کلید حل مشکل کپی شدن: عدد امتیاز هرگز با موس انتخاب یا کپی نمی‌شود */
+
+    /* Prevent the score from being selected or copied with the mouse */
     user-select: none !important;
-    -webkit-user-select: none !important; /* سازگاری کامل با مرورگرهای بر پایه کرومیوم */
+    -webkit-user-select: none !important; /* Full compatibility with Chromium-based browsers */
     -moz-user-select: none !important;
     -ms-user-select: none !important;
 }
+
+/* Per-tier background color, aligned with Sorsa's own palette (gray -> blue -> green -> teal -> cyan) */
+.corsa-tier-unknown     { background-color: rgba(110, 118, 125, 0.22) !important; color: #8b98a5 !important; } /* Tier 1 Unknown */
+.corsa-tier-noted       { background-color: rgba(29, 155, 240, 0.18)  !important; color: #1d9bf0 !important; } /* Tier 2 Noted */
+.corsa-tier-credible    { background-color: rgba(0, 186, 124, 0.18)   !important; color: #00ba7c !important; } /* Tier 3 Credible */
+.corsa-tier-significant { background-color: rgba(20, 184, 166, 0.20)  !important; color: #14b8a6 !important; } /* Tier 4 Significant */
+.corsa-tier-supreme     { background-color: rgba(0, 229, 255, 0.20)   !important; color: #00e5ff !important; } /* Tier 5 Supreme */

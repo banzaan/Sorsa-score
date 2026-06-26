@@ -51,6 +51,24 @@ function injectSorsa() {
     });
 }
 
+// Map a score to its color class based on Sorsa's official tiers (Unknown/Noted/Credible/Significant/Supreme)
+function getTierClass(score) {
+    if (score >= 2000) return 'corsa-tier-supreme';     // Tier 5
+    if (score >= 1000) return 'corsa-tier-significant';  // Tier 4
+    if (score >= 500)  return 'corsa-tier-credible';     // Tier 3
+    if (score >= 100)  return 'corsa-tier-noted';        // Tier 2
+    return 'corsa-tier-unknown';                          // Tier 1
+}
+
+// Human-readable tier label shown on hover (tooltip)
+function getTierLabel(score) {
+    if (score >= 2000) return 'Tier 5 · Supreme';
+    if (score >= 1000) return 'Tier 4 · Significant';
+    if (score >= 500)  return 'Tier 3 · Credible';
+    if (score >= 100)  return 'Tier 2 · Noted';
+    return 'Tier 1 · Unknown';
+}
+
 function renderBadge(targetElement, score) {
     if (score === null || score === undefined || !targetElement) return;
     
@@ -61,7 +79,9 @@ function renderBadge(targetElement, score) {
     }
 
     const badge = document.createElement('span');
-    badge.className = 'corsa-final-badge';
+    // Add the tier class so the score-appropriate background color is applied
+    badge.className = 'corsa-final-badge ' + getTierClass(score);
+    badge.title = getTierLabel(score); // Show the tier name on hover
     badge.innerText = ` ${score} `;
     
     // اضافه کردن امتیاز چسبیده به متن آیدی
